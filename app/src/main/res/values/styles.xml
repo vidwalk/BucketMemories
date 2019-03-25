@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Item" parent="AppTheme">
+        <item name="layoutBackGroundColor">@color/colorIconDate</item>
+        <item name="textColorSmall">#f8bbd0</item>
+        <item name="textColorLarge">@color/colorPrimary</item>
+    </style>
+
+    <style name="Item.Expired" parent="AppTheme">
+        <item name="layoutBackGroundColor">#ffeb3b</item>
+        <item name="textColorSmall">@color/colorExpiredTaskColor</item>
+        <item name="textColorLarge">@color/colorExpiredTaskColorBackground</item>
+    </style>
+
+    <style name="ItemTextViewSmall">
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Small</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="ItemTextViewLarge">
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Large</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ItemTaskLayout">
+        <item name="android:background">?attr/layoutBackGroundColor</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/divider_margin</item>
+        <item name="android:layout_marginRight">@dimen/divider_margin</item>
+        <item name="android:layout_marginBottom">@dimen/mid_margin</item>
+        <item name="android:background">@color/colorPrimaryWhite</item>
+    </style>
+
+    <style name="date_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="text_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/mid_margin</item>
+        <item name="android:layout_marginBottom">@dimen/mid_margin</item>
+        <item name="android:layout_marginEnd">@dimen/mid_margin</item>
+        <item name="android:layout_marginStart">@dimen/mid_margin</item>
+        <item name="android:drawablePadding">@dimen/min_margin</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Material.Medium</item>
+    </style>
+
+    <style name="ItemLayoutRed" parent="date_style">
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="ItemLayout.Black" parent="date_style">
+        <item name="android:textColor">@color/colorDescriptionBlack</item>
+    </style>
+
+    <style name="ItemLayout.Black.Medium" parent="date_style">
+        <item name="android:textColor">@color/colorDescriptionBlack</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Material.Medium</item>
+    </style>
+
+    <style name="ItemLayout.Black.Large" parent="date_style">
+        <item name="android:textAppearance">@android:style/TextAppearance.Material.Large</item>
+    </style>
+
+    <style name="EditForPin">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

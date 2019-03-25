@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_change_layout"
+        app:showAsAction="always"
+        android:titleCondensed="Change Layout"
+        android:title="@string/change_layout"/>
+</menu>
