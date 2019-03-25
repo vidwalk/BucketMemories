@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#311b92</color>
+    <color name="colorPrimaryDark">#000063</color>
+    <color name="colorPrimaryWhite">#ffff</color>
+    <color name="colorAccent">#6746c3</color>
+    <color name="colorDescriptionBlack">#000</color>
+    <color name="colorBackGroundItem">#eeeeee</color>
+    <color name="colorIconDate">#696969</color>
+    <color name="colorExpiredTaskColor">#c94f7c</color>
+    <color name="colorExpiredTaskColorBackground">#ffcdd2</color>
+    <color name="colorExpiredTaskText">#00e676</color>
 </resources>

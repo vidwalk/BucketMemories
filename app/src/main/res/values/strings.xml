@@ -1,9 +1,38 @@
 <resources>
-    <string name="app_name">BucketNotes</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="app_name">BucketList</string>
+    <string name="task_name">Name</string>
+    <string name="save">Save</string>
+    <string name="task_description">Task Description</string>
+    <string name="text_description_view">TextDescriptionView</string>
+    <string name="text_name_view">TextNameView</string>
+    <string name="change_layout">change_layout</string>
+    <string name="subtask_description">SubTask description</string>
+    <string name="subtask_status">SubTask status</string>
+    <string name="task_status">Task status</string>
+    <string name="done_task">DONE</string>
+    <string name="undone_task">UNDONE</string>
+    <string name="all_tasks">ALL TASKS</string>
+    <string name="expired_task">EXPIRED TASKS</string>
+
+    <string name="undo">UNDO</string>
+    <string name="sub_task_deleted">SubTask deleted</string>
+
+    <!-- dialog fragment -->
+    <string name="category_name">Name:</string>
+    <string name="category_add">Add category</string>
+    <string name="enter_your_pin">Enter your pin</string>
+    <string name="category_exists">Category with this name already exists</string>
+    <string name="next">Next</string>
+    <string name="login">Login</string>
+    <string name="registration">Registration</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="welcome">Welcome</string>
+    <string name="title_activity_task">TaskActivity</string>
+    <string name="description_text">
+        Time to take action
+    </string>
     <string name="action_settings">Settings</string>
 </resources>

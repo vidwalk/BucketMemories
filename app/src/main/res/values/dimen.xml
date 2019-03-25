@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <dimen name="space16">16dip</dimen>
+   <dimen name="space4">4dp</dimen>
+   <dimen name="space8">8dp</dimen>
+   <dimen name="min_margin">8dip</dimen>
+   <dimen name="divider_margin">12dip</dimen>
+   <dimen name="mid_margin">16dip</dimen>
+   <dimen name="max_margin">32dip</dimen>
+   <integer name="max_length">1024</integer>
+   <dimen name="divider_height">1dip</dimen>
+</resources>
