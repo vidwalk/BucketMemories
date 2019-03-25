@@ -9,7 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.adapters.TaskFragmentPagerAdapter;
 import com.example.bucketnotes.bucketmemories.data.FileDataSource;
 import com.example.bucketnotes.bucketmemories.data.IDataSource;

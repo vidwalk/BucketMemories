@@ -8,7 +8,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 
 
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {

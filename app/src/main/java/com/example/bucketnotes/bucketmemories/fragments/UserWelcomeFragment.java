@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.bucketnotes.bucketmemories.LoginActivity;
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 
 /**
  * A simple {@link Fragment} subclass.

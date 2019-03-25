@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.CategoryActivity;
 import com.example.bucketnotes.bucketmemories.enums.BundleKey;
 import com.example.bucketnotes.bucketmemories.validators.Validator;

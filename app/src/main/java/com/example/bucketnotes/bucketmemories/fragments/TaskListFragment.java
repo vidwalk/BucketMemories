@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.adapters.TaskAdapter;
 import com.example.bucketnotes.bucketmemories.entities.Task;
 

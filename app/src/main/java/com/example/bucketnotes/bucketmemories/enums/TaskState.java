@@ -1,6 +1,6 @@
 package com.example.bucketnotes.bucketmemories.enums;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 
 public enum TaskState {
     DONE(R.string.done_task),

@@ -13,7 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 
 /**
  * A simple {@link Fragment} subclass.

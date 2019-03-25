@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.adapters.ItemTouchHelperCallback;
 import com.example.bucketnotes.bucketmemories.adapters.SubTaskAdapter;
 import com.example.bucketnotes.bucketmemories.entities.SubTask;

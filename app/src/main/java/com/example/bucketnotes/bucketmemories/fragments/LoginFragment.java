@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.bucketnotes.bucketmemories.LoginActivity;
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.entities.User;
 
 import java.util.ArrayList;

@@ -12,7 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.adapters.CategoryAdapter;
 import com.example.bucketnotes.bucketmemories.data.IDataSource;
 import com.example.bucketnotes.bucketmemories.data.SharedPreferencesDataSource;

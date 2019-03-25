@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.entities.SubTask;
 import com.example.bucketnotes.bucketmemories.entities.TaskObject;
 

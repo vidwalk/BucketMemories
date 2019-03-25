@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.bucketnotes.R;
+import com.example.bucketnotes.bucketmemories.R;
 import com.example.bucketnotes.bucketmemories.data.FileDataSource;
 import com.example.bucketnotes.bucketmemories.data.IDataSource;
 import com.example.bucketnotes.bucketmemories.entities.User;
