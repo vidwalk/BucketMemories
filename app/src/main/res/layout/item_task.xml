@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:weightSum="1.0"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_weight="0.88"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/ItemTextViewLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_view"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@style/ItemTextViewSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackGroundItem"
+            android:text="@string/text_description_view"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/colorDescriptionBlack"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/subTaskCountLayout"
+        android:layout_marginStart="@dimen/min_margin"
+        android:layout_weight="0.12"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:contentDescription="@null"
+            android:src="@drawable/ic_shape"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/subTaskCount"
+            tools:text="100"
+            android:textColor="@color/colorDescriptionBlack"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>
