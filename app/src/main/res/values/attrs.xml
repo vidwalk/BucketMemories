@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="Energy">
-        <attr name="textColorSmall" format="color"/>
-        <attr name="textColorLarge" format="color"/>
-        <attr name="layoutBackGroundColor" format="color"/>
-    </declare-styleable>
-</resources>

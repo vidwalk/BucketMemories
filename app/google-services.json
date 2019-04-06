@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "603059838525",
+    "firebase_url": "https://bucketmemories.firebaseio.com",
+    "project_id": "bucketmemories",
+    "storage_bucket": "bucketmemories.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603059838525:android:741a0ef6927d00f5",
+        "android_client_info": {
+          "package_name": "com.example.bucketnotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603059838525-b0j4jivbh3o20i6k1m6jfpp518to76b9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bucketnotes",
+            "certificate_hash": "b3d1c720ffc40c42645652177678e27989b07a7a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzuKalRL1IPqpidjYF5telNPQqH6rGhqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603059838525-jcdlfor9gued053sdj1cj1iqsn2hhlki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
