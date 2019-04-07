@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#311b92</color>
-    <color name="colorPrimaryDark">#000063</color>
-    <color name="colorPrimaryWhite">#ffff</color>
-    <color name="colorAccent">#6746c3</color>
-    <color name="colorDescriptionBlack">#000</color>
-    <color name="colorBackGroundItem">#eeeeee</color>
-    <color name="colorIconDate">#696969</color>
-    <color name="colorExpiredTaskColor">#c94f7c</color>
-    <color name="colorExpiredTaskColorBackground">#ffcdd2</color>
-    <color name="colorExpiredTaskText">#00e676</color>
+   <!--// <color name="colorPrimary">#757575</color>-->
+    <!--<color name="colorPrimaryDark">#6A1B9A</color>-->
+    <!--<color name="colorAccent">#F50057</color>-->
+    <!--<color name="colorPrimary">#7B1FA2</color>-->
+    <color name="colorPrimary">#1E3B63</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorAccent">#6C1972</color>
+    <color name="bg_row_background">#6C1972</color>
+    <color name="layout_back_col">#FFFFFF</color>
+    <color name="item_name">#C54343</color>
+    <color name="description">#C54343</color>
+
+    <color name="tint_add">#FFFFFF</color>
+
+    <color name="clearWhite">#000000</color>
+    <color name="cardColor">#BDBDBD</color>
+
+    <color name="textColorBlack">#000000</color>
 </resources>
