@@ -99,9 +99,6 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d(TAG, "onFailure: " + e.getLocalizedMessage());
                             }
                         });
-
-
-
             }
         }).attachToRecyclerView(mRecyclerView);
 
@@ -122,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Journal Entry -model containing data
-        //query - how data will be retrieved,no sql database
         FirestoreRecyclerOptions<JournalEntry> options = new FirestoreRecyclerOptions.Builder<JournalEntry>()
                 .setQuery(query, new SnapshotParser<JournalEntry>() {
                     @NonNull
@@ -158,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                       //   clickListener.onItemClick(position,v);
 
 
+                        //TODO test this together with the other lines
                         Intent yt = new Intent(MainActivity.this, DetailActivity.class);
 
                         yt.putExtra("TITLE",model.getTitle());
@@ -276,8 +273,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
-            if (id == R.id.action_signout) {
-                signOut();
+            switch (id) {
+                case R.id.action_signout:
+                        signOut();
+                        break;
+                case R.id.action_quote:
+                    //Add quote to show the quote of the day with a toast
+                    //Reason: as inspiration for the stories
+                    break;
             }
             return super.onOptionsItemSelected(item);
         }
@@ -293,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onStart() {
             super.onStart();
-            //firestore listening starts from database
+            //adapter starts listening on start
             if (mFirebaseAuthentication.getCurrentUser() != null) {
                 adapter.startListening();
             }else{
@@ -306,15 +309,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onStop() {
             super.onStop();
-            //firestore adapter listening stops from database
+            //on stop the adapter stops listening
             if (mFirebaseAuthentication.getCurrentUser() != null) {
                 adapter.stopListening();
             }
         }
-//
     }
 
 
-//}
 
 

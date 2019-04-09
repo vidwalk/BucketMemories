@@ -51,6 +51,7 @@ public class DetailActivity extends AppCompatActivity {
         tvEntry = findViewById(R.id.text_entry_view);
         fabSetView = findViewById(R.id.fab_edit_entry);
 
+        //TODO Test the next 6 lines
         String title = getIntent().getStringExtra("TITLE");
         String author = getIntent().getStringExtra("AUTHOR");
         String entry = getIntent().getStringExtra("TEXT");
@@ -63,54 +64,7 @@ public class DetailActivity extends AppCompatActivity {
         searchTitle = tvTitle.getText().toString();
         searchAuthor = tvAuthor.getText().toString();
         searchText = tvEntry.getText().toString();
-        fabSetView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Retrieve the updated fields
-                final String titleUpdate = tvTitle.getText().toString();
-                final String authorUpdate = tvAuthor.getText().toString();
-                final String entryUpdate = tvEntry.getText().toString();
-                //Check if they are equal to any of the documents already present
-                //Low probability of an entry to have all 3 values equal
-                db.collection(DATABASE_COLLECTION)
-                        .whereEqualTo("text", searchText)
-                        .whereEqualTo("title", searchTitle)
-                        .whereEqualTo("author", searchAuthor)
-                        .get()
-                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                            @Override
-                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                if (task.isSuccessful()) {
-                                    for (QueryDocumentSnapshot document : task.getResult()) {
-                                        Log.d(TAG, document.getId() + " => " + document.getData());
-                                        //Update the fields in the documents that match
-                                        DocumentReference dbReference = db.collection(DATABASE_COLLECTION).document(document.getId());
-                                        dbReference.update(TITLE, titleUpdate);
-                                        dbReference.update(AUTHOR, authorUpdate);
-                                        dbReference.update(TIMESTAMP, FieldValue.serverTimestamp());
-                                        dbReference.update(TEXT, entryUpdate)
-                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                    @Override
-                                                    public void onSuccess(Void aVoid) {
-                                                        tvAuthor.setText(authorUpdate);
-                                                        tvEntry.setText(entryUpdate);
-                                                        tvTitle.setText(titleUpdate);
-                                                    }
-                                                })
-                                                .addOnFailureListener(new OnFailureListener() {
-                                                    @Override
-                                                    public void onFailure(@NonNull Exception e) {
-                                                        Log.w(TAG, "Error writing document", e);
-                                                    }
-                                                });
-                                    }
-                                } else {
-                                    Log.d(TAG, "Error getting documents: ", task.getException());
-                                }
-                            }
-                        });
-            }
-        });
+        UpdateEntry();
 
     }
 
@@ -124,6 +78,12 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        UpdateEntry();
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void UpdateEntry()
+    {
         final String titleUpdate = tvTitle.getText().toString();
         final String authorUpdate = tvAuthor.getText().toString();
         final String entryUpdate = tvEntry.getText().toString();
@@ -166,9 +126,5 @@ public class DetailActivity extends AppCompatActivity {
                         }
                     }
                 });
-        finish();
-        return super.onOptionsItemSelected(item);
     }
-
-
 }

@@ -9,23 +9,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.util.List;
 
 
 public class JournalAdapter extends Adapter<JournalAdapter.TextCardViewHolder> {
     public static ClickListener clickListenerInterface;
     private Activity context;
-    private FirebaseFirestore firestoreDB;
     private List<JournalEntry> journalEntries;
 
 
-    public JournalAdapter(List<JournalEntry> list, Activity ctx,   FirebaseFirestore firestore) {
+    public JournalAdapter(List<JournalEntry> list, Activity ctx) {
         journalEntries = list;
         context = ctx;
-        firestoreDB = firestore;
     }
 
     @NonNull
@@ -40,12 +35,7 @@ public class JournalAdapter extends Adapter<JournalAdapter.TextCardViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TextCardViewHolder holder, final int position) {
-
-
-
-        holder.bind(journalEntries.get(position),position);
-
-
+        holder.bind(journalEntries.get(position));
 
     }
 
@@ -70,7 +60,7 @@ public class JournalAdapter extends Adapter<JournalAdapter.TextCardViewHolder> {
 
 
     }
-        void bind(final JournalEntry journalEntry, final int position) {
+        void bind(final JournalEntry journalEntry){
             textViewTitle.setText(journalEntry.getTitle());
             textViewText.setText(journalEntry.getText());
             textViewAuthor.setText(journalEntry.getAuthor());
