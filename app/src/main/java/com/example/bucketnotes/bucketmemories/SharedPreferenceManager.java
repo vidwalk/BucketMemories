@@ -15,6 +15,8 @@ public class SharedPreferenceManager implements SharedPreferences {
     @Nullable
     @Override
     public String getString(String key, @Nullable String defValue) {
+        SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        String imgSett = prefs.getString(keyChannel, "");
         return null;
     }
 

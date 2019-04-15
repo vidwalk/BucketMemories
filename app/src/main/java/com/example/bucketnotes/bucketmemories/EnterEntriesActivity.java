@@ -24,7 +24,6 @@ import java.util.Map;
 
 public class EnterEntriesActivity extends AppCompatActivity {
 
-    public static final String VALUES = "title";
     //Constants
     private static final String TAG = EnterEntriesActivity.class.getSimpleName();
     private static final String TITLE = "title";
@@ -39,14 +38,10 @@ public class EnterEntriesActivity extends AppCompatActivity {
     EditText etTitle;
     EditText etAuthor;
     EditText etTextEntry;
-    boolean boolUpdate = false;
     FloatingActionButton fabAddNote;
     FirebaseAuth firebaseAuth;
     private FirebaseFirestore db;
-    private JournalEntry journalEntry;
     private String userId;
-    private String docId;
-    private String docIdRef;
 
 
     @Override
@@ -72,30 +67,10 @@ public class EnterEntriesActivity extends AppCompatActivity {
         etTitle = findViewById(R.id.edit_title);
         etAuthor = findViewById(R.id.edit_author);
         etTextEntry = findViewById(R.id.edit_text_entry);
-/*
-        Intent parentIntent = getIntent();
 
-        if (parentIntent.hasExtra(VALUES)) {
-
-            boolUpdate = true;
-            journalEntry = getIntent().getParcelableExtra(VALUES);
-            etTitle.setText(journalEntry.getTitle());
-            etAuthor.setText(journalEntry.getAuthor());
-            etTextEntry.setText(journalEntry.getText());
-
-            journalEntry.setId(db.collection(DATABASE_COLLECTION).document().getId());
-            docIdRef = journalEntry.getId();
-
-        }
-        */
         fabAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              /*  if (boolUpdate) {
-                    updateJournalEntry();
-                } else {
-                    addJournalEntry();
-                }*/
               addJournalEntry();
             }
         });
@@ -144,47 +119,5 @@ public class EnterEntriesActivity extends AppCompatActivity {
                     }
                 });
     }
-
-/*
-    private void updateJournalEntry() {
-        journalEntry.setId(db.collection(DATABASE_COLLECTION).document().getId());
-        docId = journalEntry.getId();
-
-        dbReference = db.collection(DATABASE_COLLECTION).document(docId);
-
-        dbReference.update(TITLE, etTitle.getText().toString());
-        dbReference.update(AUTHOR, etAuthor.getText().toString());
-        dbReference.update(TIMESTAMP, FieldValue.serverTimestamp());
-        dbReference.update(TEXT, etTextEntry.getText().toString())
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast toast = Toast.makeText(EnterEntriesActivity.this, getString(R.string.entry_update_msg), Toast.LENGTH_SHORT);
-                        View view = toast.getView();
-
-                        //Gets the actual oval background of the Toast then sets the colour filter
-                        view.getBackground().setColorFilter(Color.rgb(156, 204, 101), PorterDuff.Mode.SRC_IN);
-
-                        //Gets the TextView from the Toast so it can be editted
-                        TextView text = view.findViewById(android.R.id.message);
-                        text.setTextColor(Color.BLACK);
-
-                        toast.show();
-
-                        Intent intent = new Intent(EnterEntriesActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(EnterEntriesActivity.this, getString(R.string.error_title) + e.toString(),
-                                Toast.LENGTH_SHORT).show();
-                        Log.d(TAG, e.toString());
-                    }
-                });
-        finish();
-    }
-*/
 
 }

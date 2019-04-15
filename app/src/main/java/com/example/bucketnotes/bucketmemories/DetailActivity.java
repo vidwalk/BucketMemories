@@ -51,7 +51,6 @@ public class DetailActivity extends AppCompatActivity {
         tvEntry = findViewById(R.id.text_entry_view);
         fabSetView = findViewById(R.id.fab_edit_entry);
 
-        //TODO Test the next 6 lines
         String title = getIntent().getStringExtra("TITLE");
         String author = getIntent().getStringExtra("AUTHOR");
         String entry = getIntent().getStringExtra("TEXT");

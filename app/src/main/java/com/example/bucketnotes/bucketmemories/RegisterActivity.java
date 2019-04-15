@@ -143,52 +143,20 @@ public class RegisterActivity extends AppCompatActivity {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
-            showProgress(true);
+
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
     }
 
     private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
         return email.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
         return password.length() > 4;
     }
 
-    /**
-     * Shows the progress UI and hides the login form.
-     */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
-    private void showProgress(final boolean show) {
-        // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
-        // for very easy animations. If available, use these APIs to fade-in
-        // the progress spinner.
-
-            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
-
-            viewLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-            viewLoginFormView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    viewLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-                }
-            });
-
-            viewProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-            viewProgressView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    viewProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-                }
-            });
-
-    }
 
     /**
      * Represents an asynchronous login/registration task used to authenticate
@@ -227,18 +195,13 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             });
 
-
-
-
-
-            // TODO: register the new account here.
             return true;
         }
 
         @Override
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
-            showProgress(false);
+
             successLogin = success;
             if (successLogin) {
                 //On Success New Intent Is Opened
@@ -254,7 +217,7 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         protected void onCancelled() {
             mAuthTask = null;
-            showProgress(false);
+
         }
     }
 

@@ -212,9 +212,6 @@ public class LoginActivity extends AppCompatActivity {
             // form field with an error.
             focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
@@ -228,36 +225,6 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isPasswordValid(String password) {
 
         return password.length() > 4;
-    }
-
-    /**
-     * Shows the progress UI and hides the login form.
-     */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
-    private void showProgress(final boolean show) {
-        // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
-        // for very easy animations. If available, use these APIs to fade-in
-        // the progress spinner.
-            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
-
-            viewLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-            viewLoginFormView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    viewLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-                }
-            });
-
-            viewProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-            viewProgressView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    viewProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-                }
-            });
-
     }
 
     /**
@@ -304,7 +271,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
-            showProgress(false);
+
 
             if (success && boolSuccessLogin) {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -319,7 +286,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onCancelled() {
             mAuthTask = null;
-            showProgress(false);
+
         }
     }
 

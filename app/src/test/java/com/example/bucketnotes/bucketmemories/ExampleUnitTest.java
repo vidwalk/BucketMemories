@@ -1,4 +1,4 @@
-package com.example.bucketnotes;
+package com.example.bucketnotes.bucketmemories;
 
 import org.junit.Test;
 
