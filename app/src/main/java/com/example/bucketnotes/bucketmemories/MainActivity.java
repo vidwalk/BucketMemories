@@ -386,6 +386,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... strings) {
             URL url;
             String result = "";
+            quotePreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
             try {
                 url = new URL(strings[0]);
                 JSONObject contents = makeHttpRequest(url);
@@ -395,13 +396,13 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if(result.equals("")) {
-                quotePreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
                 result = quotePreferences.getString(MyPREFERENCES, "The limit of 10 per hour has been exceeded");
             }
             else {
                 SharedPreferences.Editor editor = quotePreferences.edit();
                 editor.putString(MyPREFERENCES, result);
-                editor.commit();
+                editor.apply();
             }
             return result ;
         }
