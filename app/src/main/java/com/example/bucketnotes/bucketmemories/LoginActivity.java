@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuthentication;
     private boolean boolSuccessLogin = false;
     GoogleSignInClient mGoogleSignInClient;
-    private int RC_SIGN_IN ;
+    private int RC_SIGN_IN = 9001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
