@@ -2,12 +2,10 @@ package com.example.bucketnotes.bucketmemories;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,7 +35,6 @@ public class DetailActivity extends AppCompatActivity {
     String searchTitle;
     String searchText;
     String searchAuthor;
-    FloatingActionButton fabSetView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +46,6 @@ public class DetailActivity extends AppCompatActivity {
         tvTitle = findViewById(R.id.text_title_view);
         tvAuthor = findViewById(R.id.text_author_view);
         tvEntry = findViewById(R.id.text_entry_view);
-        fabSetView = findViewById(R.id.fab_edit_entry);
 
         String title = getIntent().getStringExtra("TITLE");
         String author = getIntent().getStringExtra("AUTHOR");

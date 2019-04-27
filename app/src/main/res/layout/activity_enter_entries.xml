@@ -31,7 +31,7 @@
                 <EditText
                     android:id="@+id/edit_title"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/layout_height_entertext"
+                    android:layout_height="82dp"
                     android:layout_marginTop="@dimen/margin_top"
                     android:gravity="top"
                     android:hint="@string/label_title"
@@ -56,7 +56,7 @@
                 <EditText
                     android:id="@+id/edit_author"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/layout_height_entertext"
+                    android:layout_height="88dp"
                     android:layout_marginTop="@dimen/margin_top"
                     android:gravity="top"
                     android:hint="@string/label_author"
@@ -73,18 +73,19 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="587dp">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/layout_height_entertext_body"
+                    android:paddingTop="@dimen/padd_10"
                     app:layout_constraintLeft_toLeftOf="@+id/layout_author"
                     app:layout_constraintTop_toBottomOf="@+id/layout_author">
 
                     <EditText
                         android:id="@+id/edit_text_entry"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/layout_height_entertext_body"
+                        android:layout_height="447dp"
                         android:layout_marginTop="@dimen/margin_top"
                         android:layout_marginBottom="@dimen/cardview_height"
                         android:gravity="top"
